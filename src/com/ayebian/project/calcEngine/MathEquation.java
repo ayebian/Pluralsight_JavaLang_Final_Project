@@ -43,6 +43,13 @@ public class MathEquation {
     }
 
 
+    public MathEquation(double leftVal, double rightVal, char opCode){
+        this.rightVal = rightVal;
+        this.leftVal = leftVal;
+        this.opCode = opCode;
+    }
+
+
     public void execute (){
         switch (opCode){
             case 'a':
