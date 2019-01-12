@@ -18,18 +18,33 @@ public class Main {
 //        }
 
 
-        CalculateBase[] calculators = {
-                new Divider(100.0d,50.0d),
-                new Adder( 25.0d, 92.0d),
-                new Subtractor(225.0d,17.0d),
-                new Multiplier(11.0d, 3.0d)
+        String[] statements= {
+                "divide 100.0 50.0",
+                "add 25.0 92.0",
+                "subtract 225.0 17.0",
+                "multiply 11.0 3.0"
         };
 
-        for (CalculateBase calculator:calculators){
-            calculator.calculate();
-            System.out.print("Result = ");
-            System.out.println(calculator.getResult());
+        CalculateHelper helper = new CalculateHelper();
+        for (String statement: statements){
+            helper.process(statement);
+            System.out.println(helper);
         }
+
+
+
+//        CalculateBase[] calculators = {
+//                new Divider(100.0d,50.0d),
+//                new Adder( 25.0d, 92.0d),
+//                new Subtractor(225.0d,17.0d),
+//                new Multiplier(11.0d, 3.0d)
+//        };
+//
+//        for (CalculateBase calculator:calculators){
+//            calculator.calculate();
+//            System.out.print("Result = ");
+//            System.out.println(calculator.getResult());
+//        }
 
 
 
